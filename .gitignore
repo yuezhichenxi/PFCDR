@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+data/raw/*.gz
+data/raw/*.part
+data/mid/*.csv
+data/ready/
+model/
+syn_data/

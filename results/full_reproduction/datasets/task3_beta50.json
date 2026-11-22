@@ -1,0 +1,34 @@
+{
+  "task": "3",
+  "ratio": [
+    0.5,
+    0.5
+  ],
+  "split_seed": 2020,
+  "python_hash_seed": "2020",
+  "common_users": 18031,
+  "training_common_users": 9015,
+  "test_users": 9016,
+  "rows_train_src": 1097592,
+  "rows_train_tgt": 1427099,
+  "rows_test": 270434,
+  "file_sha256": {
+    "train_src.csv": "d5c8585abc28dae8e1b734143a8e565ec3737677f0b4607eeb774a5e5dde3212",
+    "train_tgt.csv": "eea0367c3cb2635203044a00ab1234132c3a7448674c442334edeffd3b33514c",
+    "test.csv": "918a6781ab95a8eaa6c3e1e9ebcae32de95a9ab5f0cd61dc23d3981d7a7f2a5f",
+    "train_meta.csv": "aee98f699a63ba94d255f629b10ee71eb0b71d53634461d7d5325bdce9841418",
+    "test_list.csv": "5d1cb5f47fc1e3c00b8c2ede0b77548e63f1f036e20d0be0c39527ad8d72c5c0"
+  },
+  "raw_sources": {
+    "CDs_and_Vinyl": {
+      "bytes": 490831332,
+      "sha256": "3ed8d8008686160e1190c3666c67b779120d52d540764eae08aed8a4840dd760",
+      "url": "https://snap.stanford.edu/data/amazon/productGraph/categoryFiles/reviews_CDs_and_Vinyl_5.json.gz"
+    },
+    "Movies_and_TV": {
+      "bytes": 708988936,
+      "sha256": "2219c5d688f8f923884626054ccd9098b9fe203228a7fe97d621749d5f26cf6e",
+      "url": "https://snap.stanford.edu/data/amazon/productGraph/categoryFiles/reviews_Movies_and_TV_5.json.gz"
+    }
+  }
+}

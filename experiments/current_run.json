@@ -1,0 +1,43 @@
+{
+  "job_id": "task3_beta80_seed2021",
+  "task": "3",
+  "ratio": [
+    0.2,
+    0.8
+  ],
+  "seed": 2021,
+  "base_model": "MF",
+  "epoch": 10,
+  "emb_dim": 10,
+  "lr": 0.01,
+  "lr_prototype": 0.005,
+  "wd": 0,
+  "task_settings": {
+    "src": "CDs_and_Vinyl",
+    "tgt": "Movies_and_TV",
+    "co_user_num": 18031,
+    "topk": 85000,
+    "uid_src": 75258,
+    "iid_src": 64443,
+    "uid_tgt": 123960,
+    "iid_tgt": 50052,
+    "batchsize_src": 256,
+    "batchsize_tgt": 256,
+    "batchsize_meta": 1024,
+    "batchsize_map": 128,
+    "batchsize_test": 128
+  },
+  "inversion": {
+    "syn_root": "./syn_data/",
+    "iter": 300,
+    "batch": 200,
+    "r_feature": 0,
+    "lr": 0.0001,
+    "weight_decay": 0.0001,
+    "clean_gen_data": true,
+    "target_label": 5,
+    "store_best_results": true
+  },
+  "effective_mf_topk": 70000,
+  "attempt": 1
+}

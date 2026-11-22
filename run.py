@@ -44,6 +44,8 @@ class Run():
         self.lr = config['lr']
         self.lr_prototype = config['lr_prototype']
         self.wd = config['wd']
+        # Opt-in per-stage accumulation; absent stages retain the original updates.
+        self.accumulation_steps = config.get('accumulation_steps', {})
 
         self.input_root = self.root + 'ready/_' + str(int(self.ratio[0] * 10)) + '_' + str(int(self.ratio[1] * 10)) + \
             '/tgt_' + self.tgt + '_src_' + self.src
@@ -182,19 +184,44 @@ class Run():
         predicts = torch.tensor(predicts)
         return loss(targets, predicts).item(), torch.sqrt(mse_loss(targets, predicts)).item()
 
-    def train(self, data_loader, model, criterion, optimizer, epoch, stage, mapping=False):
+    def train(self, data_loader, model, criterion, optimizer, epoch, stage, mapping=False,
+              accumulation_steps=None):
+        if accumulation_steps is None:
+            accumulation_steps = getattr(self, 'accumulation_steps', {}).get(stage, 1)
+        if not isinstance(accumulation_steps, int) or accumulation_steps < 1:
+            raise ValueError('accumulation_steps must be a positive integer')
+        if accumulation_steps > 1 and getattr(criterion, 'reduction', None) != 'mean':
+            raise ValueError('Gradient accumulation requires a mean-reduced loss')
         print('Training Epoch {}:'.format(epoch + 1))
         model.train()
-        for X, y in tqdm.tqdm(data_loader, smoothing=0, mininterval=1.0):
+        accumulated_samples = 0
+        if accumulation_steps > 1:
+            model.zero_grad()
+        for batch_idx, (X, y) in enumerate(tqdm.tqdm(data_loader, smoothing=0, mininterval=1.0)):
             if mapping:
                 src_emb, tgt_emb = model(X, stage)
                 loss = criterion(src_emb, tgt_emb)
             else:
                 pred = model(X, stage)
                 loss = criterion(pred, y.squeeze().float())
-            model.zero_grad()
-            loss.backward()
-            optimizer.step()
+            if accumulation_steps == 1:
+                # Preserve the original path for all existing experiments.
+                model.zero_grad()
+                loss.backward()
+                optimizer.step()
+            else:
+                # Weight by actual batch size, including uneven/final microbatches.
+                batch_samples = X.shape[0]
+                (loss * batch_samples).backward()
+                accumulated_samples += batch_samples
+                if (batch_idx + 1) % accumulation_steps == 0 or batch_idx + 1 == len(data_loader):
+                    for group in optimizer.param_groups:
+                        for parameter in group['params']:
+                            if parameter.grad is not None:
+                                parameter.grad.div_(accumulated_samples)
+                    optimizer.step()
+                    model.zero_grad()
+                    accumulated_samples = 0
 
     def update_results(self, mae, rmse, phase):
         if mae < self.results[phase + '_mae']:

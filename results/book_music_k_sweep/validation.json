@@ -1,0 +1,24 @@
+{
+  "formal_training_started": false,
+  "synthetic_tests": {
+    "command": "python -m unittest discover -s tests -p test_batch_accumulation_and_k.py -v",
+    "passed": 7,
+    "failed": 0,
+    "checks": [
+      "512 twice matches 1024 with Adam",
+      "final incomplete accumulation group is updated",
+      "uneven microbatches use actual sample weights",
+      "vector mapping MSE and per-stage configuration",
+      "default accumulation=1 keeps original bitwise updates",
+      "explicit K matches independent voting calculation and validates bounds",
+      "omitting K keeps the historical 70000 default"
+    ]
+  },
+  "real_checkpoint_probe": {
+    "optimizer_steps": 0,
+    "backward_calls": 0,
+    "weights_unchanged": true,
+    "all_requested_k_fit_batch512": true,
+    "record": "results/book_music_k_sweep/feasibility.json"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "task": "Book to Music",
+  "method": "EMCDR",
+  "seed": 2020,
+  "completed_runs": 3,
+  "planned_runs": 3,
+  "complete": true,
+  "rows": [
+    {
+      "beta": 20,
+      "tgt_mae": 4.499667167663574,
+      "tgt_rmse": 5.168050765991211,
+      "emcdr_mae": 1.7241466045379639,
+      "emcdr_rmse": 2.0329954624176025,
+      "paper_emcdr_mae": 1.3524,
+      "paper_emcdr_rmse": 1.6737
+    },
+    {
+      "beta": 50,
+      "tgt_mae": 4.54733419418335,
+      "tgt_rmse": 5.221314907073975,
+      "emcdr_mae": 2.0008628368377686,
+      "emcdr_rmse": 2.3191325664520264,
+      "paper_emcdr_mae": 1.4723,
+      "paper_emcdr_rmse": 1.8
+    },
+    {
+      "beta": 80,
+      "tgt_mae": 4.5424675941467285,
+      "tgt_rmse": 5.231729507446289,
+      "emcdr_mae": 2.4670400619506836,
+      "emcdr_rmse": 2.8034539222717285,
+      "paper_emcdr_mae": 1.7191,
+      "paper_emcdr_rmse": 2.1119
+    }
+  ],
+  "updated_at": "2026-11-17T18:12:51+08:00"
+}

@@ -1,0 +1,325 @@
+{
+  "planned_runs": 18,
+  "completed_runs": 18,
+  "complete": true,
+  "conditions": [
+    {
+      "task": "1",
+      "test_percentage": 20,
+      "completed": 2,
+      "expected": 2,
+      "training_seeds": [
+        2020,
+        2021
+      ],
+      "complete": true,
+      "mean": {
+        "tgt_mae": 4.195982217788696,
+        "tgt_rmse": 4.770193099975586,
+        "emcdr_mae": 1.1126928329467773,
+        "emcdr_rmse": 1.4043915271759033,
+        "sfcdr_mae": 0.9347057044506073,
+        "sfcdr_rmse": 1.2128766179084778
+      },
+      "sample_std": {
+        "tgt_mae": 0.06389495951730344,
+        "tgt_rmse": 0.04191824400457094,
+        "emcdr_mae": 0.01788577380887108,
+        "emcdr_rmse": 0.029273683689120603,
+        "sfcdr_mae": 0.012330861321983756,
+        "sfcdr_rmse": 0.01976628189573015
+      },
+      "paper_reference": {
+        "tgt_mae": 4.1831,
+        "tgt_rmse": 4.7536,
+        "emcdr_mae": 1.1651,
+        "emcdr_rmse": 1.4548,
+        "sfcdr_mae": 0.9579,
+        "sfcdr_rmse": 1.2437
+      }
+    },
+    {
+      "task": "1",
+      "test_percentage": 50,
+      "completed": 2,
+      "expected": 2,
+      "training_seeds": [
+        2020,
+        2021
+      ],
+      "complete": true,
+      "mean": {
+        "tgt_mae": 4.223299980163574,
+        "tgt_rmse": 4.782486200332642,
+        "emcdr_mae": 1.1734617352485657,
+        "emcdr_rmse": 1.4846351742744446,
+        "sfcdr_mae": 0.982060968875885,
+        "sfcdr_rmse": 1.2870919704437256
+      },
+      "sample_std": {
+        "tgt_mae": 0.011904967417781171,
+        "tgt_rmse": 0.016506391750806537,
+        "emcdr_mae": 0.005624328346384765,
+        "emcdr_rmse": 0.011147925724828494,
+        "sfcdr_mae": 0.0017298752502811347,
+        "sfcdr_rmse": 0.0040688567552417095
+      },
+      "paper_reference": {
+        "tgt_mae": 4.2288,
+        "tgt_rmse": 4.792,
+        "emcdr_mae": 1.1798,
+        "emcdr_rmse": 1.4933,
+        "sfcdr_mae": 0.9742,
+        "sfcdr_rmse": 1.3113
+      }
+    },
+    {
+      "task": "1",
+      "test_percentage": 80,
+      "completed": 2,
+      "expected": 2,
+      "training_seeds": [
+        2020,
+        2021
+      ],
+      "complete": true,
+      "mean": {
+        "tgt_mae": 4.236307382583618,
+        "tgt_rmse": 4.816944599151611,
+        "emcdr_mae": 1.3264833688735962,
+        "emcdr_rmse": 1.6790403723716736,
+        "sfcdr_mae": 1.1217447519302368,
+        "sfcdr_rmse": 1.4744991064071655
+      },
+      "sample_std": {
+        "tgt_mae": 0.001928976962646598,
+        "tgt_rmse": 0.0004039353961284084,
+        "emcdr_mae": 0.01099881017479695,
+        "emcdr_rmse": 0.005867431368595602,
+        "sfcdr_mae": 0.007990873890271465,
+        "sfcdr_rmse": 0.005955855456771458
+      },
+      "paper_reference": {
+        "tgt_mae": 4.2123,
+        "tgt_rmse": 4.8149,
+        "emcdr_mae": 1.3248,
+        "emcdr_rmse": 1.6737,
+        "sfcdr_mae": 1.0689,
+        "sfcdr_rmse": 1.4779
+      }
+    },
+    {
+      "task": "2",
+      "test_percentage": 20,
+      "completed": 2,
+      "expected": 2,
+      "training_seeds": [
+        2020,
+        2021
+      ],
+      "complete": true,
+      "mean": {
+        "tgt_mae": 4.484937906265259,
+        "tgt_rmse": 5.1490700244903564,
+        "emcdr_mae": 1.7406017184257507,
+        "emcdr_rmse": 2.060645818710327,
+        "sfcdr_mae": 1.7211329340934753,
+        "sfcdr_rmse": 1.9910034537315369
+      },
+      "sample_std": {
+        "tgt_mae": 0.02083032123323618,
+        "tgt_rmse": 0.026842822054406277,
+        "emcdr_mae": 0.023271045230502052,
+        "emcdr_rmse": 0.039103508873619394,
+        "sfcdr_mae": 0.011750794245928321,
+        "sfcdr_rmse": 0.01700482038129637
+      },
+      "paper_reference": {
+        "tgt_mae": 4.4873,
+        "tgt_rmse": 5.1672,
+        "emcdr_mae": 1.3524,
+        "emcdr_rmse": 1.6737,
+        "sfcdr_mae": 1.0717,
+        "sfcdr_rmse": 1.4548
+      }
+    },
+    {
+      "task": "2",
+      "test_percentage": 50,
+      "completed": 2,
+      "expected": 2,
+      "training_seeds": [
+        2020,
+        2021
+      ],
+      "complete": true,
+      "mean": {
+        "tgt_mae": 4.5409095287323,
+        "tgt_rmse": 5.2073705196380615,
+        "emcdr_mae": 1.9700173139572144,
+        "emcdr_rmse": 2.302295684814453,
+        "sfcdr_mae": 2.061189651489258,
+        "sfcdr_rmse": 2.330085873603821
+      },
+      "sample_std": {
+        "tgt_mae": 0.009085849014584492,
+        "tgt_rmse": 0.019720341830853274,
+        "emcdr_mae": 0.04362215679616937,
+        "emcdr_rmse": 0.023810946359926605,
+        "sfcdr_mae": 0.03355630926000957,
+        "sfcdr_rmse": 0.019617672107880735
+      },
+      "paper_reference": {
+        "tgt_mae": 4.5073,
+        "tgt_rmse": 5.1727,
+        "emcdr_mae": 1.4723,
+        "emcdr_rmse": 1.8,
+        "sfcdr_mae": 1.2386,
+        "sfcdr_rmse": 1.7167
+      }
+    },
+    {
+      "task": "2",
+      "test_percentage": 80,
+      "completed": 2,
+      "expected": 2,
+      "training_seeds": [
+        2020,
+        2021
+      ],
+      "complete": true,
+      "mean": {
+        "tgt_mae": 4.539405107498169,
+        "tgt_rmse": 5.2246763706207275,
+        "emcdr_mae": 2.4422131776809692,
+        "emcdr_rmse": 2.7858113050460815,
+        "sfcdr_mae": 2.59038770198822,
+        "sfcdr_rmse": 2.872217059135437
+      },
+      "sample_std": {
+        "tgt_mae": 0.004331010152979471,
+        "tgt_rmse": 0.009974641755982226,
+        "emcdr_mae": 0.03511051644569729,
+        "emcdr_rmse": 0.024950428556267137,
+        "sfcdr_mae": 0.022844434829874784,
+        "sfcdr_rmse": 0.018130394117628307
+      },
+      "paper_reference": {
+        "tgt_mae": 4.5204,
+        "tgt_rmse": 5.2308,
+        "emcdr_mae": 1.7191,
+        "emcdr_rmse": 2.1119,
+        "sfcdr_mae": 1.4947,
+        "sfcdr_rmse": 2.1358
+      }
+    },
+    {
+      "task": "3",
+      "test_percentage": 20,
+      "completed": 2,
+      "expected": 2,
+      "training_seeds": [
+        2020,
+        2021
+      ],
+      "complete": true,
+      "mean": {
+        "tgt_mae": 4.0931055545806885,
+        "tgt_rmse": 4.643265247344971,
+        "emcdr_mae": 1.1192018389701843,
+        "emcdr_rmse": 1.4385725855827332,
+        "sfcdr_mae": 0.9827285706996918,
+        "sfcdr_rmse": 1.271657109260559
+      },
+      "sample_std": {
+        "tgt_mae": 0.015180620484047856,
+        "tgt_rmse": 0.031787490321704366,
+        "emcdr_mae": 0.015567107084892754,
+        "emcdr_rmse": 0.011478525604547946,
+        "sfcdr_mae": 0.008183695722208804,
+        "sfcdr_rmse": 0.008639261007763058
+      },
+      "paper_reference": {
+        "tgt_mae": 4.1077,
+        "tgt_rmse": 4.7057,
+        "emcdr_mae": 1.1669,
+        "emcdr_rmse": 1.491,
+        "sfcdr_mae": 0.9865,
+        "sfcdr_rmse": 1.2658
+      }
+    },
+    {
+      "task": "3",
+      "test_percentage": 50,
+      "completed": 2,
+      "expected": 2,
+      "training_seeds": [
+        2020,
+        2021
+      ],
+      "complete": true,
+      "mean": {
+        "tgt_mae": 4.1555657386779785,
+        "tgt_rmse": 4.719271898269653,
+        "emcdr_mae": 1.1734399199485779,
+        "emcdr_rmse": 1.5058948397636414,
+        "sfcdr_mae": 1.0249145030975342,
+        "sfcdr_rmse": 1.338146686553955
+      },
+      "sample_std": {
+        "tgt_mae": 0.030731458885415404,
+        "tgt_rmse": 0.04128132082987431,
+        "emcdr_mae": 0.008863903710326124,
+        "emcdr_rmse": 0.012647510594846104,
+        "sfcdr_mae": 0.002763821737950387,
+        "sfcdr_rmse": 0.002142240016111722
+      },
+      "paper_reference": {
+        "tgt_mae": 4.1232,
+        "tgt_rmse": 4.6848,
+        "emcdr_mae": 1.2114,
+        "emcdr_rmse": 1.5332,
+        "sfcdr_mae": 1.1014,
+        "sfcdr_rmse": 1.3262
+      }
+    },
+    {
+      "task": "3",
+      "test_percentage": 80,
+      "completed": 2,
+      "expected": 2,
+      "training_seeds": [
+        2020,
+        2021
+      ],
+      "complete": true,
+      "mean": {
+        "tgt_mae": 4.16751503944397,
+        "tgt_rmse": 4.753495216369629,
+        "emcdr_mae": 1.2268535494804382,
+        "emcdr_rmse": 1.5918577313423157,
+        "sfcdr_mae": 1.068056046962738,
+        "sfcdr_rmse": 1.4378793835639954
+      },
+      "sample_std": {
+        "tgt_mae": 0.06186921339047583,
+        "tgt_rmse": 0.05501074102599506,
+        "emcdr_mae": 0.010530390100446874,
+        "emcdr_rmse": 0.01145846370465676,
+        "sfcdr_mae": 0.005027697558864549,
+        "sfcdr_rmse": 0.014235098084554459
+      },
+      "paper_reference": {
+        "tgt_mae": 4.1381,
+        "tgt_rmse": 4.7436,
+        "emcdr_mae": 1.2373,
+        "emcdr_rmse": 1.6013,
+        "sfcdr_mae": 1.0712,
+        "sfcdr_rmse": 1.4285
+      }
+    }
+  ],
+  "selection": "Independent minimum test MAE and RMSE over 10 epochs, following original update_results().",
+  "aggregation": "Arithmetic mean and sample standard deviation (ddof=1) across the two distinct training seeds, 2020 and 2021.",
+  "updated_at": "2026-11-17T14:45:13+08:00"
+}

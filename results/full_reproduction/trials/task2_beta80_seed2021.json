@@ -1,0 +1,244 @@
+{
+  "job_id": "task2_beta80_seed2021",
+  "task": "2",
+  "ratio": [
+    0.2,
+    0.8
+  ],
+  "training_seed": 2021,
+  "completed_runs": 1,
+  "metrics": {
+    "tgt_mae": 4.536342620849609,
+    "tgt_rmse": 5.217623233795166,
+    "emcdr_mae": 2.417386293411255,
+    "emcdr_rmse": 2.7681686878204346,
+    "sfcdr_mae": 2.5742342472076416,
+    "sfcdr_rmse": 2.8593969345092773
+  },
+  "source_code_revision": "c88e6fe",
+  "source_python_files_modified": false,
+  "execution_commit": "7619dc380114239a90786f7df0c008762ffd658c",
+  "parameters": {
+    "job_id": "task2_beta80_seed2021",
+    "task": "2",
+    "ratio": [
+      0.2,
+      0.8
+    ],
+    "seed": 2021,
+    "base_model": "MF",
+    "epoch": 10,
+    "emb_dim": 10,
+    "lr": 0.01,
+    "lr_prototype": 0.005,
+    "wd": 0,
+    "task_settings": {
+      "src": "Books",
+      "tgt": "CDs_and_Vinyl",
+      "co_user_num": 16738,
+      "topk": 50000,
+      "uid_src": 603668,
+      "iid_src": 367982,
+      "uid_tgt": 75258,
+      "iid_tgt": 64443,
+      "batchsize_src": 512,
+      "batchsize_tgt": 512,
+      "batchsize_meta": 512,
+      "batchsize_map": 128,
+      "batchsize_test": 128
+    },
+    "inversion": {
+      "syn_root": "./syn_data/",
+      "iter": 300,
+      "batch": 200,
+      "r_feature": 0,
+      "lr": 0.0001,
+      "weight_decay": 0.0001,
+      "clean_gen_data": true,
+      "target_label": 5,
+      "store_best_results": true
+    },
+    "effective_mf_topk": 70000,
+    "attempt": 1
+  },
+  "environment": {
+    "python": "3.11.14",
+    "torch": "2.3.1",
+    "cuda": "11.8",
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "scipy": "1.16.2",
+    "tqdm": "4.67.1"
+  },
+  "prototype_counts": {
+    "5_MF_train_src.csv": 3348,
+    "5_MF_test_src.csv": 13390,
+    "5_MF_train_tgt.csv": 3348
+  },
+  "recovery": {
+    "used": false
+  },
+  "dataset_manifest": "results/full_reproduction/datasets/task2_beta80.json",
+  "dataset_manifest_sha256": "6d164a65037ae5eab3b7dfb1d94d4fb543cd9aaef4a4c68e0ebfb8c01d6a195d",
+  "operational_driver_sha256": "126d299590cb6a367d64100e0e819c54e2c5c28aa60ce3bea640480098e439ad",
+  "started_at": "2026-11-17T10:22:48+08:00",
+  "completed_at": "2026-11-17T11:45:29+08:00",
+  "per_epoch_metrics": {
+    "tgt": [
+      {
+        "epoch": 1,
+        "mae": 4.536342620849609,
+        "rmse": 5.217623233795166
+      },
+      {
+        "epoch": 2,
+        "mae": 4.573653697967529,
+        "rmse": 5.303325653076172
+      },
+      {
+        "epoch": 3,
+        "mae": 4.643203258514404,
+        "rmse": 5.450361251831055
+      },
+      {
+        "epoch": 4,
+        "mae": 4.670596599578857,
+        "rmse": 5.504630088806152
+      },
+      {
+        "epoch": 5,
+        "mae": 4.675108432769775,
+        "rmse": 5.511255741119385
+      },
+      {
+        "epoch": 6,
+        "mae": 4.6704254150390625,
+        "rmse": 5.500724792480469
+      },
+      {
+        "epoch": 7,
+        "mae": 4.664074420928955,
+        "rmse": 5.487501621246338
+      },
+      {
+        "epoch": 8,
+        "mae": 4.656876087188721,
+        "rmse": 5.470893859863281
+      },
+      {
+        "epoch": 9,
+        "mae": 4.646772861480713,
+        "rmse": 5.452732563018799
+      },
+      {
+        "epoch": 10,
+        "mae": 4.639777660369873,
+        "rmse": 5.438399791717529
+      }
+    ],
+    "emcdr": [
+      {
+        "epoch": 1,
+        "mae": 2.4440362453460693,
+        "rmse": 2.8155481815338135
+      },
+      {
+        "epoch": 2,
+        "mae": 2.481050729751587,
+        "rmse": 2.817622184753418
+      },
+      {
+        "epoch": 3,
+        "mae": 2.5087380409240723,
+        "rmse": 2.838697910308838
+      },
+      {
+        "epoch": 4,
+        "mae": 2.4519925117492676,
+        "rmse": 2.792046308517456
+      },
+      {
+        "epoch": 5,
+        "mae": 2.417386293411255,
+        "rmse": 2.7681686878204346
+      },
+      {
+        "epoch": 6,
+        "mae": 2.4909608364105225,
+        "rmse": 2.8207387924194336
+      },
+      {
+        "epoch": 7,
+        "mae": 2.4646530151367188,
+        "rmse": 2.800508499145508
+      },
+      {
+        "epoch": 8,
+        "mae": 2.4962403774261475,
+        "rmse": 2.8252406120300293
+      },
+      {
+        "epoch": 9,
+        "mae": 2.521496534347534,
+        "rmse": 2.844654083251953
+      },
+      {
+        "epoch": 10,
+        "mae": 2.529064416885376,
+        "rmse": 2.852754592895508
+      }
+    ],
+    "sfcdr": [
+      {
+        "epoch": 1,
+        "mae": 2.6257870197296143,
+        "rmse": 2.9022881984710693
+      },
+      {
+        "epoch": 2,
+        "mae": 2.587800979614258,
+        "rmse": 2.8714239597320557
+      },
+      {
+        "epoch": 3,
+        "mae": 2.578371047973633,
+        "rmse": 2.8637897968292236
+      },
+      {
+        "epoch": 4,
+        "mae": 2.5752501487731934,
+        "rmse": 2.8609979152679443
+      },
+      {
+        "epoch": 5,
+        "mae": 2.5742971897125244,
+        "rmse": 2.8598906993865967
+      },
+      {
+        "epoch": 6,
+        "mae": 2.5742547512054443,
+        "rmse": 2.8595240116119385
+      },
+      {
+        "epoch": 7,
+        "mae": 2.574259042739868,
+        "rmse": 2.8593969345092773
+      },
+      {
+        "epoch": 8,
+        "mae": 2.57425594329834,
+        "rmse": 2.8594179153442383
+      },
+      {
+        "epoch": 9,
+        "mae": 2.5742595195770264,
+        "rmse": 2.8595120906829834
+      },
+      {
+        "epoch": 10,
+        "mae": 2.5742342472076416,
+        "rmse": 2.859576940536499
+      }
+    ]
+  }
+}

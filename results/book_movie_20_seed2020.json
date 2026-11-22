@@ -1,0 +1,330 @@
+{
+  "commit": "ac8850607240b5414b291961eca874a9e22a20f5",
+  "task": "Book -> Movie",
+  "ratio": [
+    0.8,
+    0.2
+  ],
+  "training_seed": 2020,
+  "completed_runs": 1,
+  "metrics": {
+    "tgt_mae": 4.150801658630371,
+    "tgt_rmse": 4.7405524253845215,
+    "emcdr_mae": 1.1253399848937988,
+    "emcdr_rmse": 1.4250911474227905,
+    "sfcdr_mae": 0.9434249401092529,
+    "sfcdr_rmse": 1.2268534898757935
+  },
+  "selection": "Original code: independent minimum test MAE/RMSE over epochs.",
+  "paper_pfcdr_reference": {
+    "mae": 0.9579,
+    "rmse": 1.2437
+  },
+  "completed_at": "2026-11-16 00:31:45",
+  "recovery": "Reused completed source prototypes and baseline model; rebuilt target prototypes with exact RNG replay.",
+  "last_epoch_model": "pfcdr-seed2020-last-epoch.pt",
+  "base_model": "MF",
+  "epochs": 10,
+  "source_code_revision": "c88e6fe",
+  "source_python_files_modified": false,
+  "parameters": {
+    "task": "1",
+    "gpu": "0",
+    "epoch": 10,
+    "seed": 2020,
+    "ratio": [
+      0.8,
+      0.2
+    ],
+    "lr": 0.01,
+    "lr_prototype": 0.005,
+    "emb_dim": 10,
+    "wd": 0,
+    "task_settings": {
+      "src": "Books",
+      "tgt": "Movies_and_TV",
+      "co_user_num": 37388,
+      "topk": 85000,
+      "uid_src": 603668,
+      "iid_src": 367982,
+      "uid_tgt": 123960,
+      "iid_tgt": 50052,
+      "batchsize_src": 512,
+      "batchsize_tgt": 512,
+      "batchsize_meta": 512,
+      "batchsize_map": 128,
+      "batchsize_test": 128
+    },
+    "inversion": {
+      "syn_root": "./syn_data/",
+      "iter": 300,
+      "batch": 200,
+      "r_feature": 0,
+      "lr": 0.0001,
+      "weight_decay": 0.0001,
+      "clean_gen_data": true,
+      "target_label": 5,
+      "store_best_results": true
+    },
+    "effective_hard_coded_mf_topk": 70000
+  },
+  "per_epoch_metrics": {
+    "tgt": [
+      {
+        "epoch": 1,
+        "mae": 4.1917195320129395,
+        "rmse": 4.7574591636657715
+      },
+      {
+        "epoch": 2,
+        "mae": 4.233869552612305,
+        "rmse": 4.948545455932617
+      },
+      {
+        "epoch": 3,
+        "mae": 4.2071051597595215,
+        "rmse": 4.896895885467529
+      },
+      {
+        "epoch": 4,
+        "mae": 4.186522006988525,
+        "rmse": 4.8486809730529785
+      },
+      {
+        "epoch": 5,
+        "mae": 4.175609111785889,
+        "rmse": 4.816125869750977
+      },
+      {
+        "epoch": 6,
+        "mae": 4.16583776473999,
+        "rmse": 4.789710521697998
+      },
+      {
+        "epoch": 7,
+        "mae": 4.161372184753418,
+        "rmse": 4.773627281188965
+      },
+      {
+        "epoch": 8,
+        "mae": 4.156902313232422,
+        "rmse": 4.759472370147705
+      },
+      {
+        "epoch": 9,
+        "mae": 4.152656078338623,
+        "rmse": 4.748469829559326
+      },
+      {
+        "epoch": 10,
+        "mae": 4.150801658630371,
+        "rmse": 4.7405524253845215
+      }
+    ],
+    "emcdr": [
+      {
+        "epoch": 1,
+        "mae": 1.1424260139465332,
+        "rmse": 1.4376006126403809
+      },
+      {
+        "epoch": 2,
+        "mae": 1.1349596977233887,
+        "rmse": 1.4318114519119263
+      },
+      {
+        "epoch": 3,
+        "mae": 1.1388417482376099,
+        "rmse": 1.435996174812317
+      },
+      {
+        "epoch": 4,
+        "mae": 1.1415412425994873,
+        "rmse": 1.4368908405303955
+      },
+      {
+        "epoch": 5,
+        "mae": 1.1358281373977661,
+        "rmse": 1.434550166130066
+      },
+      {
+        "epoch": 6,
+        "mae": 1.140255093574524,
+        "rmse": 1.4388275146484375
+      },
+      {
+        "epoch": 7,
+        "mae": 1.1276570558547974,
+        "rmse": 1.4256097078323364
+      },
+      {
+        "epoch": 8,
+        "mae": 1.1253399848937988,
+        "rmse": 1.4250911474227905
+      },
+      {
+        "epoch": 9,
+        "mae": 1.1376138925552368,
+        "rmse": 1.4357212781906128
+      },
+      {
+        "epoch": 10,
+        "mae": 1.1406292915344238,
+        "rmse": 1.4378855228424072
+      }
+    ],
+    "sfcdr": [
+      {
+        "epoch": 1,
+        "mae": 0.9434249401092529,
+        "rmse": 1.2429206371307373
+      },
+      {
+        "epoch": 2,
+        "mae": 0.9543485641479492,
+        "rmse": 1.2268534898757935
+      },
+      {
+        "epoch": 3,
+        "mae": 0.9583168029785156,
+        "rmse": 1.2277801036834717
+      },
+      {
+        "epoch": 4,
+        "mae": 0.9579263925552368,
+        "rmse": 1.2276712656021118
+      },
+      {
+        "epoch": 5,
+        "mae": 0.9577541351318359,
+        "rmse": 1.2275913953781128
+      },
+      {
+        "epoch": 6,
+        "mae": 0.9585182070732117,
+        "rmse": 1.2277964353561401
+      },
+      {
+        "epoch": 7,
+        "mae": 0.9570757746696472,
+        "rmse": 1.2273467779159546
+      },
+      {
+        "epoch": 8,
+        "mae": 0.9578546285629272,
+        "rmse": 1.2275612354278564
+      },
+      {
+        "epoch": 9,
+        "mae": 0.9571698307991028,
+        "rmse": 1.2273516654968262
+      },
+      {
+        "epoch": 10,
+        "mae": 0.9567291736602783,
+        "rmse": 1.2272262573242188
+      }
+    ]
+  },
+  "best_epochs": {
+    "tgt": {
+      "mae": 10,
+      "rmse": 10
+    },
+    "emcdr": {
+      "mae": 8,
+      "rmse": 8
+    },
+    "sfcdr": {
+      "mae": 1,
+      "rmse": 2
+    }
+  },
+  "dataset": {
+    "rows_train_src": 8898041,
+    "rows_train_tgt": 1527452,
+    "rows_test": 170081,
+    "common_users": 37388,
+    "test_users": 7478,
+    "training_common_users": 29910,
+    "seed": 2020,
+    "pythonhashseed": "2020",
+    "split_unit": "common users",
+    "train_src.csv_sha256": "57f3f02f3d7bfd3910a58ce2a0dc8c36467da37a1fda0d6322122d90bb16506a",
+    "train_tgt.csv_sha256": "6801adac471a971efaee89767f1cefeb6c97974ae50f29ad6210695dd66f15df",
+    "test.csv_sha256": "67bc7e9cc2457299d1cb9b18dabcaa29bb151d6cea141ca81ba2a5d4c9c99b88",
+    "train_meta.csv_sha256": "e9e010cfeaabb4033bb055a4882d372f4a84397e8d8bdf8b43573031473035cc",
+    "test_list.csv_sha256": "cc30ec5fa137095c52a4180854faf2a7d83dd45ce2ab98c589896366b65490c0"
+  },
+  "raw_datasets": {
+    "Books": {
+      "bytes": 3223678899,
+      "sha256": "d22b38a7066e2ac3b25ffb66bc1264d8974ebe8f9dc51ed2e4b0f6ed43358a65",
+      "url": "https://snap.stanford.edu/data/amazon/productGraph/categoryFiles/reviews_Books_5.json.gz"
+    },
+    "Movies_and_TV": {
+      "bytes": 708988936,
+      "sha256": "2219c5d688f8f923884626054ccd9098b9fe203228a7fe97d621749d5f26cf6e",
+      "url": "https://snap.stanford.edu/data/amazon/productGraph/categoryFiles/reviews_Movies_and_TV_5.json.gz"
+    }
+  },
+  "prototype_counts": {
+    "5_MF_train_src.csv": 29910,
+    "5_MF_train_tgt.csv": 29910,
+    "5_MF_test_src.csv": 7478
+  },
+  "model_validation": {
+    "unchanged_parameters": [
+      "src_model.uid_embedding.weight",
+      "src_model.iid_embedding.weight",
+      "tgt_model.uid_embedding.weight",
+      "tgt_model.iid_embedding.weight",
+      "mapping.weight"
+    ],
+    "rp_mapping_updated": true,
+    "last_epoch_checkpoint_metrics": {
+      "mae": 0.9567291736602783,
+      "rmse": 1.2272262573242188
+    },
+    "checkpoint_note": "Last epoch; independently selected minima can come from different epochs."
+  },
+  "recovery_validation": {
+    "source_hashes_unchanged": true,
+    "target_prefix_rows": 1200,
+    "target_prefix_bitwise_equal": true,
+    "numpy_draws_replayed": 13758111016,
+    "baseline_dataloader_iterations_replayed": 50,
+    "provenance": {
+      "commit": "ac8850607240b5414b291961eca874a9e22a20f5",
+      "seed": 2020,
+      "source_hashes": {
+        "5_MF_train_src.csv": "c1be5c7aa5090b862e1adbe8369238dfa42ae6857887234d29fbae9abaa232fb",
+        "5_MF_test_src.csv": "dffd56f3b29a44f4f01b7ebccecdeeb93dcf00cd0415ec1c4bb115f86394c2aa"
+      },
+      "config_sha256": "3515b7373edf6082048f31750bc58dadcd4eff4e8fe4b951d473ec4009126463",
+      "baseline_sha256": "e170c43503cd06fc435b5776d3876e9ecc9f4626f30f415f60216732c6c8ce2c"
+    }
+  },
+  "environment": {
+    "training_python": "3.11.14",
+    "torch": "2.3.1",
+    "cuda": "11.8",
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "scipy": "1.16.2",
+    "tqdm": "4.67.1",
+    "preprocessing_python": "3.10.20",
+    "preprocessing_pandas": "2.2.3",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "gpu_vram_mib": 8188
+  },
+  "paper_reference": {
+    "tgt_mae": 4.1831,
+    "tgt_rmse": 4.7536,
+    "emcdr_mae": 1.1651,
+    "emcdr_rmse": 1.4548,
+    "sfcdr_mae": 0.9579,
+    "sfcdr_rmse": 1.2437,
+    "aggregation": "Mean over ten runs; this file records one run."
+  }
+}

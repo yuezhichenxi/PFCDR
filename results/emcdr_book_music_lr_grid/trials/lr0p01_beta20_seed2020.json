@@ -1,0 +1,220 @@
+{
+  "complete": true,
+  "task": "Book to Music",
+  "method": "EMCDR",
+  "base_model": "MF",
+  "beta": 20,
+  "seed": 2020,
+  "started_at": "2026-11-17T17:36:30+08:00",
+  "completed_at": "2026-11-17T17:48:21+08:00",
+  "metrics": {
+    "tgt_mae": 4.499667167663574,
+    "tgt_rmse": 5.168050765991211,
+    "emcdr_mae": 1.7241466045379639,
+    "emcdr_rmse": 2.0329954624176025
+  },
+  "history": {
+    "tgt": [
+      {
+        "epoch": 1,
+        "mae": 4.499667167663574,
+        "rmse": 5.168050765991211
+      },
+      {
+        "epoch": 2,
+        "mae": 4.565404415130615,
+        "rmse": 5.3254828453063965
+      },
+      {
+        "epoch": 3,
+        "mae": 4.624105453491211,
+        "rmse": 5.447451114654541
+      },
+      {
+        "epoch": 4,
+        "mae": 4.630756378173828,
+        "rmse": 5.454453945159912
+      },
+      {
+        "epoch": 5,
+        "mae": 4.622424602508545,
+        "rmse": 5.439571857452393
+      },
+      {
+        "epoch": 6,
+        "mae": 4.619112491607666,
+        "rmse": 5.42445707321167
+      },
+      {
+        "epoch": 7,
+        "mae": 4.6055755615234375,
+        "rmse": 5.401012897491455
+      },
+      {
+        "epoch": 8,
+        "mae": 4.601271152496338,
+        "rmse": 5.385573863983154
+      },
+      {
+        "epoch": 9,
+        "mae": 4.586175918579102,
+        "rmse": 5.360904693603516
+      },
+      {
+        "epoch": 10,
+        "mae": 4.584929466247559,
+        "rmse": 5.351691722869873
+      }
+    ],
+    "emcdr": [
+      {
+        "epoch": 1,
+        "mae": 1.7778236865997314,
+        "rmse": 2.079618453979492
+      },
+      {
+        "epoch": 2,
+        "mae": 1.7735872268676758,
+        "rmse": 2.0700247287750244
+      },
+      {
+        "epoch": 3,
+        "mae": 1.7244279384613037,
+        "rmse": 2.0329954624176025
+      },
+      {
+        "epoch": 4,
+        "mae": 1.7616283893585205,
+        "rmse": 2.0626814365386963
+      },
+      {
+        "epoch": 5,
+        "mae": 1.7241466045379639,
+        "rmse": 2.036973476409912
+      },
+      {
+        "epoch": 6,
+        "mae": 1.766272783279419,
+        "rmse": 2.07092547416687
+      },
+      {
+        "epoch": 7,
+        "mae": 1.7842062711715698,
+        "rmse": 2.081949234008789
+      },
+      {
+        "epoch": 8,
+        "mae": 1.7566360235214233,
+        "rmse": 2.0613133907318115
+      },
+      {
+        "epoch": 9,
+        "mae": 1.7949633598327637,
+        "rmse": 2.092100143432617
+      },
+      {
+        "epoch": 10,
+        "mae": 1.7347162961959839,
+        "rmse": 2.0407679080963135
+      }
+    ]
+  },
+  "config": {
+    "use_cuda": 1,
+    "root": "D:/毕设论文/PFCDR/data/",
+    "model_root": "D:/毕设论文/ccfa-workfiles/experiments/pfcdr-emcdr-book-music-fresh-20261117/beta20_seed2020/model/",
+    "src_tgt_pairs": {
+      "1": {
+        "src": "Books",
+        "tgt": "Movies_and_TV",
+        "co_user_num": 37388,
+        "topk": 85000,
+        "uid_src": 603668,
+        "iid_src": 367982,
+        "uid_tgt": 123960,
+        "iid_tgt": 50052,
+        "batchsize_src": 512,
+        "batchsize_tgt": 512,
+        "batchsize_meta": 512,
+        "batchsize_map": 128,
+        "batchsize_test": 1024
+      },
+      "2": {
+        "src": "Books",
+        "tgt": "CDs_and_Vinyl",
+        "co_user_num": 16738,
+        "topk": 50000,
+        "uid_src": 603668,
+        "iid_src": 367982,
+        "uid_tgt": 75258,
+        "iid_tgt": 64443,
+        "batchsize_src": 512,
+        "batchsize_tgt": 512,
+        "batchsize_meta": 512,
+        "batchsize_map": 128,
+        "batchsize_test": 256
+      },
+      "3": {
+        "src": "CDs_and_Vinyl",
+        "tgt": "Movies_and_TV",
+        "co_user_num": 18031,
+        "topk": 85000,
+        "uid_src": 75258,
+        "iid_src": 64443,
+        "uid_tgt": 123960,
+        "iid_tgt": 50052,
+        "batchsize_src": 256,
+        "batchsize_tgt": 256,
+        "batchsize_meta": 1024,
+        "batchsize_map": 128,
+        "batchsize_test": 512
+      }
+    },
+    "emb_dim": 10,
+    "meta_dim": 50,
+    "num_fields": 2,
+    "wd": 0,
+    "task": "2",
+    "base_model": "MF",
+    "epoch": 10,
+    "lr": 0.01,
+    "lr_prototype": 0.005,
+    "ratio": [
+      0.8,
+      0.2
+    ],
+    "accumulation_steps": {}
+  },
+  "checkpoint_loaded": false,
+  "source_and_target_trained_from_scratch": true,
+  "inversion_executed": false,
+  "pfcdr_executed": false,
+  "initial_mapping_sha256": "0af5cec5aa35687bdafcf9eef89fff45099aaf82b885de8c9b5b2cb939e02a2c",
+  "training_common_users": 13390,
+  "test_users": 3348,
+  "fresh_final_checkpoint_sha256": "cec4998c4ed8bd46c300f9a787a49f2d6d9533fd3e695add7e0fe73b1245497c",
+  "execution": {
+    "commit": "c5cba36bd1a28e275a68b80eceea4ed62031cdf5",
+    "started_at": "2026-11-17T17:36:25+08:00",
+    "fresh_model": true
+  },
+  "dataset_manifest": "results/full_reproduction/datasets/task2_beta20.json",
+  "dataset_sha256": {
+    "train_src.csv": "ba485f1698b95d401a045e43bd2a37c19dcc7082e67ce89df20fda3116e90d7a",
+    "train_tgt.csv": "80dbc6880e88b7f4e1f2e082dd6c8e68400463a504df073984210f7b9e59c99d",
+    "test.csv": "8b42a35587299fc1320d4f11d3be6e82e620651923e0de7af86ed856aee52b71",
+    "train_meta.csv": "f857c41915d42b0f892e8217f513ebd9e82420740e6c844570a52162cce6ba05",
+    "test_list.csv": "0fa6f2b5975218f213885b4db61b367c7da9ed8235319563e322bb7aacc10dbe"
+  },
+  "source_sha256": {
+    "models.py": "754b96761176914863fd788e31fb79fe646f8c3a5b6d4e8e9d10e4f63c5ad7ff",
+    "run.py": "755a295faafd07b7740594c4234b1a6de5849e5fc2ce3c25f30978a8b444b84f",
+    "float_embedding.py": "4df6960000753b3780dd4ae7f2d2257bd7c5471e674d55135d93dca6edabba48"
+  },
+  "selection": "Independent minimum MAE and RMSE over epochs; no averaging.",
+  "learning_rate": 0.01,
+  "run_kind": "adopted_fresh_baseline",
+  "new_training_in_this_grid": false,
+  "adopted_from": "results\\emcdr_book_music_fresh\\trials\\beta20_seed2020.json",
+  "adopted_report_sha256": "7b8dbd74f797a9cbb899a8e8251809ab49ce49457b7c807c784601180b3de657"
+}

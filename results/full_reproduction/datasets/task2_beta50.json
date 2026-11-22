@@ -1,0 +1,34 @@
+{
+  "task": "2",
+  "ratio": [
+    0.5,
+    0.5
+  ],
+  "split_seed": 2020,
+  "python_hash_seed": "2020",
+  "common_users": 16738,
+  "training_common_users": 8369,
+  "test_users": 8369,
+  "rows_train_src": 8898041,
+  "rows_train_tgt": 911597,
+  "rows_test": 185995,
+  "file_sha256": {
+    "train_src.csv": "ba485f1698b95d401a045e43bd2a37c19dcc7082e67ce89df20fda3116e90d7a",
+    "train_tgt.csv": "2c81cb72c8702cc85bafef3aa0060426c8fcf57c34ba18a0e16948ed85d3ff27",
+    "test.csv": "10a53b60eb15e86b9682789be4cb4ce5790a2b78e551b121330ec0be3e5df1ce",
+    "train_meta.csv": "820668ebb597aa5688f43b6d681d7c0ffaf5bca16ab4990a091cfeadf7d1b32a",
+    "test_list.csv": "38473554951970f09b5034451a62167ebc51e1b380dd10a85b69b9bccc980e84"
+  },
+  "raw_sources": {
+    "Books": {
+      "bytes": 3223678899,
+      "sha256": "d22b38a7066e2ac3b25ffb66bc1264d8974ebe8f9dc51ed2e4b0f6ed43358a65",
+      "url": "https://snap.stanford.edu/data/amazon/productGraph/categoryFiles/reviews_Books_5.json.gz"
+    },
+    "CDs_and_Vinyl": {
+      "bytes": 490831332,
+      "sha256": "3ed8d8008686160e1190c3666c67b779120d52d540764eae08aed8a4840dd760",
+      "url": "https://snap.stanford.edu/data/amazon/productGraph/categoryFiles/reviews_CDs_and_Vinyl_5.json.gz"
+    }
+  }
+}

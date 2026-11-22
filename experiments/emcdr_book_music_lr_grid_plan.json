@@ -1,0 +1,33 @@
+{
+  "status": "user_approved",
+  "task": "2",
+  "source": "Books",
+  "target": "CDs_and_Vinyl",
+  "method": "EMCDR",
+  "base_model": "MF",
+  "learning_rates": [0.001, 0.005, 0.01, 0.02, 0.1],
+  "learning_rate_scope": "The same candidate is assigned to source MF, target MF and user mapping Adam, matching the released shared lr parameter.",
+  "test_percentages": [20, 50, 80],
+  "seed": 2020,
+  "independent_runs_per_configuration": 1,
+  "epochs_per_training_stage": 10,
+  "training_batches": {"source":512,"target":512,"mapping":128},
+  "evaluation_batch_size": 256,
+  "embedding_dimension": 10,
+  "weight_decay": 0,
+  "mapping_bias": false,
+  "gradient_accumulation": false,
+  "new_training_runs": 12,
+  "total_comparison_configurations": 15,
+  "adopted_baseline": {
+    "learning_rate": 0.01,
+    "count": 3,
+    "source": "results/emcdr_book_music_fresh/trials/beta{20,50,80}_seed2020.json",
+    "policy": "Adopt each just-completed, verified from-scratch 0.01 result once as the existing control. Do not label these three as newly trained in this grid."
+  },
+  "new_run_initialization": "Fresh random initialization for every new learning-rate/ratio configuration; no pretrained checkpoint loading.",
+  "data_split": "Keep existing checksum-verified splits, split seed 2020 and PYTHONHASHSEED=2020.",
+  "selection": "Independent minimum MAE and RMSE over 10 mapping epochs, matching released implementation; no run averaging.",
+  "reporting": "Preserve every result and failed configuration; compare all candidates to Table1; do not select by numerical closeness to the paper.",
+  "run_pfcdr_or_inversion": false
+}

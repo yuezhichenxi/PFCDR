@@ -1,0 +1,219 @@
+{
+  "complete": true,
+  "task": "Book to Music",
+  "method": "EMCDR",
+  "base_model": "MF",
+  "beta": 20,
+  "seed": 2020,
+  "started_at": "2026-11-17T18:33:46+08:00",
+  "completed_at": "2026-11-17T18:48:17+08:00",
+  "metrics": {
+    "tgt_mae": 4.523688793182373,
+    "tgt_rmse": 5.2262678146362305,
+    "emcdr_mae": 4.293976783752441,
+    "emcdr_rmse": 4.414834022521973
+  },
+  "history": {
+    "tgt": [
+      {
+        "epoch": 1,
+        "mae": 4.60828971862793,
+        "rmse": 5.4015655517578125
+      },
+      {
+        "epoch": 2,
+        "mae": 4.580568790435791,
+        "rmse": 5.348357677459717
+      },
+      {
+        "epoch": 3,
+        "mae": 4.559894561767578,
+        "rmse": 5.3065948486328125
+      },
+      {
+        "epoch": 4,
+        "mae": 4.544564723968506,
+        "rmse": 5.274528503417969
+      },
+      {
+        "epoch": 5,
+        "mae": 4.534045219421387,
+        "rmse": 5.251473903656006
+      },
+      {
+        "epoch": 6,
+        "mae": 4.5273871421813965,
+        "rmse": 5.236217975616455
+      },
+      {
+        "epoch": 7,
+        "mae": 4.524162769317627,
+        "rmse": 5.228090286254883
+      },
+      {
+        "epoch": 8,
+        "mae": 4.523688793182373,
+        "rmse": 5.2262678146362305
+      },
+      {
+        "epoch": 9,
+        "mae": 4.525675296783447,
+        "rmse": 5.2301836013793945
+      },
+      {
+        "epoch": 10,
+        "mae": 4.529711723327637,
+        "rmse": 5.239224910736084
+      }
+    ],
+    "emcdr": [
+      {
+        "epoch": 1,
+        "mae": 4.303025722503662,
+        "rmse": 4.517455101013184
+      },
+      {
+        "epoch": 2,
+        "mae": 4.295487880706787,
+        "rmse": 4.450011730194092
+      },
+      {
+        "epoch": 3,
+        "mae": 4.293994903564453,
+        "rmse": 4.425583362579346
+      },
+      {
+        "epoch": 4,
+        "mae": 4.29451847076416,
+        "rmse": 4.418220520019531
+      },
+      {
+        "epoch": 5,
+        "mae": 4.293976783752441,
+        "rmse": 4.415402412414551
+      },
+      {
+        "epoch": 6,
+        "mae": 4.294752597808838,
+        "rmse": 4.415469646453857
+      },
+      {
+        "epoch": 7,
+        "mae": 4.29457950592041,
+        "rmse": 4.415120601654053
+      },
+      {
+        "epoch": 8,
+        "mae": 4.294248580932617,
+        "rmse": 4.414834022521973
+      },
+      {
+        "epoch": 9,
+        "mae": 4.2943220138549805,
+        "rmse": 4.414865016937256
+      },
+      {
+        "epoch": 10,
+        "mae": 4.294671535491943,
+        "rmse": 4.41517972946167
+      }
+    ]
+  },
+  "config": {
+    "use_cuda": 1,
+    "root": "D:/毕设论文/PFCDR/data/",
+    "model_root": "D:/毕设论文/ccfa-workfiles/experiments/pfcdr-emcdr-book-music-lr-grid-20261117/lr0p001_beta20_seed2020/model/",
+    "src_tgt_pairs": {
+      "1": {
+        "src": "Books",
+        "tgt": "Movies_and_TV",
+        "co_user_num": 37388,
+        "topk": 85000,
+        "uid_src": 603668,
+        "iid_src": 367982,
+        "uid_tgt": 123960,
+        "iid_tgt": 50052,
+        "batchsize_src": 512,
+        "batchsize_tgt": 512,
+        "batchsize_meta": 512,
+        "batchsize_map": 128,
+        "batchsize_test": 1024
+      },
+      "2": {
+        "src": "Books",
+        "tgt": "CDs_and_Vinyl",
+        "co_user_num": 16738,
+        "topk": 50000,
+        "uid_src": 603668,
+        "iid_src": 367982,
+        "uid_tgt": 75258,
+        "iid_tgt": 64443,
+        "batchsize_src": 512,
+        "batchsize_tgt": 512,
+        "batchsize_meta": 512,
+        "batchsize_map": 128,
+        "batchsize_test": 256
+      },
+      "3": {
+        "src": "CDs_and_Vinyl",
+        "tgt": "Movies_and_TV",
+        "co_user_num": 18031,
+        "topk": 85000,
+        "uid_src": 75258,
+        "iid_src": 64443,
+        "uid_tgt": 123960,
+        "iid_tgt": 50052,
+        "batchsize_src": 256,
+        "batchsize_tgt": 256,
+        "batchsize_meta": 1024,
+        "batchsize_map": 128,
+        "batchsize_test": 512
+      }
+    },
+    "emb_dim": 10,
+    "meta_dim": 50,
+    "num_fields": 2,
+    "wd": 0,
+    "task": "2",
+    "base_model": "MF",
+    "epoch": 10,
+    "lr": 0.001,
+    "lr_prototype": 0.005,
+    "ratio": [
+      0.8,
+      0.2
+    ],
+    "accumulation_steps": {}
+  },
+  "checkpoint_loaded": false,
+  "source_and_target_trained_from_scratch": true,
+  "inversion_executed": false,
+  "pfcdr_executed": false,
+  "initial_mapping_sha256": "0af5cec5aa35687bdafcf9eef89fff45099aaf82b885de8c9b5b2cb939e02a2c",
+  "training_common_users": 13390,
+  "test_users": 3348,
+  "fresh_final_checkpoint_sha256": "28793eec8b336a2a7263c68e7507639cce33321f1bf08f0115c8c9dc7e206dc2",
+  "execution": {
+    "commit": "c763336eccfe1c496e4b7da4a734226827f133dc",
+    "started_at": "2026-11-17T18:33:43+08:00",
+    "fresh_model": true,
+    "learning_rate": 0.001
+  },
+  "dataset_manifest": "results/full_reproduction/datasets/task2_beta20.json",
+  "dataset_sha256": {
+    "train_src.csv": "ba485f1698b95d401a045e43bd2a37c19dcc7082e67ce89df20fda3116e90d7a",
+    "train_tgt.csv": "80dbc6880e88b7f4e1f2e082dd6c8e68400463a504df073984210f7b9e59c99d",
+    "test.csv": "8b42a35587299fc1320d4f11d3be6e82e620651923e0de7af86ed856aee52b71",
+    "train_meta.csv": "f857c41915d42b0f892e8217f513ebd9e82420740e6c844570a52162cce6ba05",
+    "test_list.csv": "0fa6f2b5975218f213885b4db61b367c7da9ed8235319563e322bb7aacc10dbe"
+  },
+  "source_sha256": {
+    "models.py": "754b96761176914863fd788e31fb79fe646f8c3a5b6d4e8e9d10e4f63c5ad7ff",
+    "run.py": "755a295faafd07b7740594c4234b1a6de5849e5fc2ce3c25f30978a8b444b84f",
+    "float_embedding.py": "4df6960000753b3780dd4ae7f2d2257bd7c5471e674d55135d93dca6edabba48"
+  },
+  "selection": "Independent minimum MAE and RMSE over epochs; no averaging.",
+  "learning_rate": 0.001,
+  "run_kind": "new_fresh_training",
+  "new_training_in_this_grid": true
+}

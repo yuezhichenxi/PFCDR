@@ -8,7 +8,7 @@
             {"src": "Books",
             "tgt": "Movies_and_TV",
             "co_user_num": 37388,
-            "topk": 85000,
+            "topk": 10000,
             "uid_src": 603668,
             "iid_src":367982,
             "uid_tgt": 123960,
@@ -17,7 +17,7 @@
             "batchsize_tgt": 512,
             "batchsize_meta": 512,
             "batchsize_map": 128,
-            "batchsize_test": 1024
+            "batchsize_test": 128
             },
             "2":
             {"src": "Books",
@@ -32,7 +32,7 @@
             "batchsize_tgt": 512,
             "batchsize_meta": 512,
             "batchsize_map": 128,
-            "batchsize_test": 256
+            "batchsize_test": 128
             },
             "3":
             {"src": "CDs_and_Vinyl",
@@ -47,7 +47,7 @@
             "batchsize_tgt": 256,
             "batchsize_meta": 1024,
             "batchsize_map": 128,
-            "batchsize_test": 512
+            "batchsize_test": 128
             }
         },
     "emb_dim": 10,

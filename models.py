@@ -120,7 +120,7 @@ class MFBasedModel(torch.nn.Module):
         self.rp_mapping = torch.nn.Linear(emb_dim, emb_dim, False)
         self.mapping = torch.nn.Linear(emb_dim, emb_dim, False)
 
-    def forward(self, x, stage, inversion_stage=None):
+    def forward(self, x, stage, inversion_stage=None, topk=None):
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         # TODO change
         if stage in ['train_src', 'src_inversion']:
@@ -178,7 +178,10 @@ class MFBasedModel(torch.nn.Module):
             predict_rate = torch.mm(tgt_user_embedding, src_rate_pre.T) - torch.tensor((target_label))
             predict_rate = torch.abs(predict_rate)
             sorted, indices = torch.sort(predict_rate, dim=0)
-            topk = 70000
+            # Use the latest MF reproduction default unless the caller supplies K.
+            topk = 10000 if topk is None else topk
+            if not isinstance(topk, int) or not 1 <= topk <= tgt_user_embedding.shape[0]:
+                raise ValueError('topk must be an integer within the target user count')
             topk_indices = indices[:topk, :]
             topk_indices = topk_indices.T.reshape(-1, 1).squeeze()
             topk_uid_emb = self.tgt_model.uid_embedding(topk_indices).view(len(x), topk, self.emb_dim)

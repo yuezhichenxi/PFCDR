@@ -1,0 +1,64 @@
+{
+  "created_at": "2026-11-17T16:08:24+08:00",
+  "task": "Book to Music",
+  "base_model": "MF",
+  "mode": "inference_memory_probe",
+  "checkpoint_job": "task2_beta20_seed2020",
+  "checkpoint_note": "Baseline checkpoint; prototype bridge is not retrained. No accuracy claim.",
+  "cuda_device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "gpu_total_mib": 8187.5,
+  "backward_calls": 0,
+  "optimizer_steps": 0,
+  "model_weights_unchanged": true,
+  "source_sha256": {
+    "models.py": "754b96761176914863fd788e31fb79fe646f8c3a5b6d4e8e9d10e4f63c5ad7ff",
+    "run.py": "755a295faafd07b7740594c4234b1a6de5849e5fc2ce3c25f30978a8b444b84f"
+  },
+  "probes": [
+    {
+      "k": 10000,
+      "batch_size": 512,
+      "peak_allocated_mib": 1965.34716796875,
+      "peak_reserved_mib": 1978.0,
+      "seconds": 0.19788239995250478,
+      "max_difference_from_batch128": 0.0,
+      "ok": true
+    },
+    {
+      "k": 15000,
+      "batch_size": 512,
+      "peak_allocated_mib": 1965.34716796875,
+      "peak_reserved_mib": 1978.0,
+      "seconds": 0.08646089996909723,
+      "max_difference_from_batch128": 0.0,
+      "ok": true
+    },
+    {
+      "k": 20000,
+      "batch_size": 512,
+      "peak_allocated_mib": 1965.34716796875,
+      "peak_reserved_mib": 2370.0,
+      "seconds": 0.0910440000006929,
+      "max_difference_from_batch128": 0.0,
+      "ok": true
+    },
+    {
+      "k": 25000,
+      "batch_size": 512,
+      "peak_allocated_mib": 1965.34716796875,
+      "peak_reserved_mib": 2958.0,
+      "seconds": 0.09615500003565103,
+      "max_difference_from_batch128": 0.0,
+      "ok": true
+    },
+    {
+      "k": 30000,
+      "batch_size": 512,
+      "peak_allocated_mib": 1990.1865234375,
+      "peak_reserved_mib": 3150.0,
+      "seconds": 0.10077649995218962,
+      "max_difference_from_batch128": 0.0,
+      "ok": true
+    }
+  ]
+}

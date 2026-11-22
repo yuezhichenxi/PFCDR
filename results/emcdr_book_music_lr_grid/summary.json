@@ -1,0 +1,228 @@
+{
+  "task": "Book to Music",
+  "method": "EMCDR",
+  "base_model": "MF",
+  "seed": 2020,
+  "finished_configurations": 15,
+  "successful_configurations": 15,
+  "planned_configurations": 15,
+  "adopted_controls": 3,
+  "new_training_runs": 12,
+  "complete": true,
+  "all_successful": true,
+  "rows": [
+    {
+      "beta": 20,
+      "lr": 0.001,
+      "success": true,
+      "run_kind": "new_fresh_training",
+      "paper_mae": 1.3524,
+      "paper_rmse": 1.6737,
+      "mae": 4.293976783752441,
+      "rmse": 4.414834022521973,
+      "delta_mae": 2.941576783752441,
+      "delta_rmse": 2.7411340225219725
+    },
+    {
+      "beta": 20,
+      "lr": 0.005,
+      "success": true,
+      "run_kind": "new_fresh_training",
+      "paper_mae": 1.3524,
+      "paper_rmse": 1.6737,
+      "mae": 2.3728060722351074,
+      "rmse": 2.6723341941833496,
+      "delta_mae": 1.0204060722351074,
+      "delta_rmse": 0.9986341941833496
+    },
+    {
+      "beta": 20,
+      "lr": 0.01,
+      "success": true,
+      "run_kind": "adopted_fresh_baseline",
+      "paper_mae": 1.3524,
+      "paper_rmse": 1.6737,
+      "mae": 1.7241466045379639,
+      "rmse": 2.0329954624176025,
+      "delta_mae": 0.3717466045379638,
+      "delta_rmse": 0.3592954624176026
+    },
+    {
+      "beta": 20,
+      "lr": 0.02,
+      "success": true,
+      "run_kind": "new_fresh_training",
+      "paper_mae": 1.3524,
+      "paper_rmse": 1.6737,
+      "mae": 1.3412916660308838,
+      "rmse": 1.6642507314682007,
+      "delta_mae": -0.011108333969116257,
+      "delta_rmse": -0.009449268531799282
+    },
+    {
+      "beta": 20,
+      "lr": 0.1,
+      "success": true,
+      "run_kind": "new_fresh_training",
+      "paper_mae": 1.3524,
+      "paper_rmse": 1.6737,
+      "mae": 4.516448974609375,
+      "rmse": 5.090177536010742,
+      "delta_mae": 3.1640489746093747,
+      "delta_rmse": 3.416477536010742
+    },
+    {
+      "beta": 50,
+      "lr": 0.001,
+      "success": true,
+      "run_kind": "new_fresh_training",
+      "paper_mae": 1.4723,
+      "paper_rmse": 1.8,
+      "mae": 4.335437297821045,
+      "rmse": 4.450909614562988,
+      "delta_mae": 2.863137297821045,
+      "delta_rmse": 2.6509096145629885
+    },
+    {
+      "beta": 50,
+      "lr": 0.005,
+      "success": true,
+      "run_kind": "new_fresh_training",
+      "paper_mae": 1.4723,
+      "paper_rmse": 1.8,
+      "mae": 2.711721658706665,
+      "rmse": 2.991408109664917,
+      "delta_mae": 1.239421658706665,
+      "delta_rmse": 1.191408109664917
+    },
+    {
+      "beta": 50,
+      "lr": 0.01,
+      "success": true,
+      "run_kind": "adopted_fresh_baseline",
+      "paper_mae": 1.4723,
+      "paper_rmse": 1.8,
+      "mae": 2.0008628368377686,
+      "rmse": 2.3191325664520264,
+      "delta_mae": 0.5285628368377686,
+      "delta_rmse": 0.5191325664520263
+    },
+    {
+      "beta": 50,
+      "lr": 0.02,
+      "success": true,
+      "run_kind": "new_fresh_training",
+      "paper_mae": 1.4723,
+      "paper_rmse": 1.8,
+      "mae": 1.425803303718567,
+      "rmse": 1.744706630706787,
+      "delta_mae": -0.04649669628143305,
+      "delta_rmse": -0.055293369293212935
+    },
+    {
+      "beta": 50,
+      "lr": 0.1,
+      "success": true,
+      "run_kind": "new_fresh_training",
+      "paper_mae": 1.4723,
+      "paper_rmse": 1.8,
+      "mae": 4.533779621124268,
+      "rmse": 5.10828161239624,
+      "delta_mae": 3.061479621124268,
+      "delta_rmse": 3.3082816123962404
+    },
+    {
+      "beta": 80,
+      "lr": 0.001,
+      "success": true,
+      "run_kind": "new_fresh_training",
+      "paper_mae": 1.7191,
+      "paper_rmse": 2.1119,
+      "mae": 4.328604698181152,
+      "rmse": 4.464354515075684,
+      "delta_mae": 2.6095046981811523,
+      "delta_rmse": 2.3524545150756837
+    },
+    {
+      "beta": 80,
+      "lr": 0.005,
+      "success": true,
+      "run_kind": "new_fresh_training",
+      "paper_mae": 1.7191,
+      "paper_rmse": 2.1119,
+      "mae": 3.2421393394470215,
+      "rmse": 3.4936888217926025,
+      "delta_mae": 1.5230393394470214,
+      "delta_rmse": 1.3817888217926027
+    },
+    {
+      "beta": 80,
+      "lr": 0.01,
+      "success": true,
+      "run_kind": "adopted_fresh_baseline",
+      "paper_mae": 1.7191,
+      "paper_rmse": 2.1119,
+      "mae": 2.4670400619506836,
+      "rmse": 2.8034539222717285,
+      "delta_mae": 0.7479400619506835,
+      "delta_rmse": 0.6915539222717286
+    },
+    {
+      "beta": 80,
+      "lr": 0.02,
+      "success": true,
+      "run_kind": "new_fresh_training",
+      "paper_mae": 1.7191,
+      "paper_rmse": 2.1119,
+      "mae": 1.5816141366958618,
+      "rmse": 1.9602692127227783,
+      "delta_mae": -0.13748586330413826,
+      "delta_rmse": -0.15163078727722157
+    },
+    {
+      "beta": 80,
+      "lr": 0.1,
+      "success": true,
+      "run_kind": "new_fresh_training",
+      "paper_mae": 1.7191,
+      "paper_rmse": 2.1119,
+      "mae": 4.513439178466797,
+      "rmse": 5.072842597961426,
+      "delta_mae": 2.794339178466797,
+      "delta_rmse": 2.960942597961426
+    }
+  ],
+  "best_by_ratio": {
+    "20": {
+      "mae": {
+        "lr": 0.02,
+        "value": 1.3412916660308838
+      },
+      "rmse": {
+        "lr": 0.02,
+        "value": 1.6642507314682007
+      }
+    },
+    "50": {
+      "mae": {
+        "lr": 0.02,
+        "value": 1.425803303718567
+      },
+      "rmse": {
+        "lr": 0.02,
+        "value": 1.744706630706787
+      }
+    },
+    "80": {
+      "mae": {
+        "lr": 0.02,
+        "value": 1.5816141366958618
+      },
+      "rmse": {
+        "lr": 0.02,
+        "value": 1.9602692127227783
+      }
+    }
+  },
+  "updated_at": "2026-11-17T22:37:03+08:00"
+}

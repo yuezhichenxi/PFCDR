@@ -1,0 +1,244 @@
+{
+  "job_id": "task3_beta20_seed2020",
+  "task": "3",
+  "ratio": [
+    0.8,
+    0.2
+  ],
+  "training_seed": 2020,
+  "completed_runs": 1,
+  "metrics": {
+    "tgt_mae": 4.103839874267578,
+    "tgt_rmse": 4.66574239730835,
+    "emcdr_mae": 1.1081942319869995,
+    "emcdr_rmse": 1.4304560422897339,
+    "sfcdr_mae": 0.9769418239593506,
+    "sfcdr_rmse": 1.2655482292175293
+  },
+  "source_code_revision": "c88e6fe",
+  "source_python_files_modified": false,
+  "execution_commit": "0aa88ed89e418a9b805058ba7d69a1a7a17a9c8a",
+  "parameters": {
+    "job_id": "task3_beta20_seed2020",
+    "task": "3",
+    "ratio": [
+      0.8,
+      0.2
+    ],
+    "seed": 2020,
+    "base_model": "MF",
+    "epoch": 10,
+    "emb_dim": 10,
+    "lr": 0.01,
+    "lr_prototype": 0.005,
+    "wd": 0,
+    "task_settings": {
+      "src": "CDs_and_Vinyl",
+      "tgt": "Movies_and_TV",
+      "co_user_num": 18031,
+      "topk": 85000,
+      "uid_src": 75258,
+      "iid_src": 64443,
+      "uid_tgt": 123960,
+      "iid_tgt": 50052,
+      "batchsize_src": 256,
+      "batchsize_tgt": 256,
+      "batchsize_meta": 1024,
+      "batchsize_map": 128,
+      "batchsize_test": 128
+    },
+    "inversion": {
+      "syn_root": "./syn_data/",
+      "iter": 300,
+      "batch": 200,
+      "r_feature": 0,
+      "lr": 0.0001,
+      "weight_decay": 0.0001,
+      "clean_gen_data": true,
+      "target_label": 5,
+      "store_best_results": true
+    },
+    "effective_mf_topk": 70000,
+    "attempt": 1
+  },
+  "environment": {
+    "python": "3.11.14",
+    "torch": "2.3.1",
+    "cuda": "11.8",
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "scipy": "1.16.2",
+    "tqdm": "4.67.1"
+  },
+  "prototype_counts": {
+    "5_MF_train_src.csv": 14425,
+    "5_MF_test_src.csv": 3606,
+    "5_MF_train_tgt.csv": 14425
+  },
+  "recovery": {
+    "used": false
+  },
+  "dataset_manifest": "results/full_reproduction/datasets/task3_beta20.json",
+  "dataset_manifest_sha256": "5969f44144fa548092fa200c5861d5089a1ad4172ae3c1e67c8bdbc49178a569",
+  "operational_driver_sha256": "126d299590cb6a367d64100e0e819c54e2c5c28aa60ce3bea640480098e439ad",
+  "started_at": "2026-11-17T11:46:04+08:00",
+  "completed_at": "2026-11-17T12:10:29+08:00",
+  "per_epoch_metrics": {
+    "tgt": [
+      {
+        "epoch": 1,
+        "mae": 4.200007438659668,
+        "rmse": 4.869601249694824
+      },
+      {
+        "epoch": 2,
+        "mae": 4.219031810760498,
+        "rmse": 4.927030086517334
+      },
+      {
+        "epoch": 3,
+        "mae": 4.180920600891113,
+        "rmse": 4.839407444000244
+      },
+      {
+        "epoch": 4,
+        "mae": 4.155832767486572,
+        "rmse": 4.78511381149292
+      },
+      {
+        "epoch": 5,
+        "mae": 4.1405792236328125,
+        "rmse": 4.746635913848877
+      },
+      {
+        "epoch": 6,
+        "mae": 4.133599281311035,
+        "rmse": 4.725518226623535
+      },
+      {
+        "epoch": 7,
+        "mae": 4.1238861083984375,
+        "rmse": 4.703697204589844
+      },
+      {
+        "epoch": 8,
+        "mae": 4.11807107925415,
+        "rmse": 4.689181327819824
+      },
+      {
+        "epoch": 9,
+        "mae": 4.10744571685791,
+        "rmse": 4.675459861755371
+      },
+      {
+        "epoch": 10,
+        "mae": 4.103839874267578,
+        "rmse": 4.66574239730835
+      }
+    ],
+    "emcdr": [
+      {
+        "epoch": 1,
+        "mae": 1.1222641468048096,
+        "rmse": 1.440368890762329
+      },
+      {
+        "epoch": 2,
+        "mae": 1.1169830560684204,
+        "rmse": 1.4361220598220825
+      },
+      {
+        "epoch": 3,
+        "mae": 1.1085190773010254,
+        "rmse": 1.4304560422897339
+      },
+      {
+        "epoch": 4,
+        "mae": 1.1148195266723633,
+        "rmse": 1.4331474304199219
+      },
+      {
+        "epoch": 5,
+        "mae": 1.1183243989944458,
+        "rmse": 1.4367139339447021
+      },
+      {
+        "epoch": 6,
+        "mae": 1.1166574954986572,
+        "rmse": 1.4354702234268188
+      },
+      {
+        "epoch": 7,
+        "mae": 1.1165876388549805,
+        "rmse": 1.4338901042938232
+      },
+      {
+        "epoch": 8,
+        "mae": 1.1081942319869995,
+        "rmse": 1.43123459815979
+      },
+      {
+        "epoch": 9,
+        "mae": 1.1240648031234741,
+        "rmse": 1.4409394264221191
+      },
+      {
+        "epoch": 10,
+        "mae": 1.1166965961456299,
+        "rmse": 1.4354344606399536
+      }
+    ],
+    "sfcdr": [
+      {
+        "epoch": 1,
+        "mae": 0.9780141711235046,
+        "rmse": 1.276302456855774
+      },
+      {
+        "epoch": 2,
+        "mae": 0.9782370924949646,
+        "rmse": 1.293026089668274
+      },
+      {
+        "epoch": 3,
+        "mae": 0.9769418239593506,
+        "rmse": 1.27389657497406
+      },
+      {
+        "epoch": 4,
+        "mae": 0.9805817008018494,
+        "rmse": 1.270776629447937
+      },
+      {
+        "epoch": 5,
+        "mae": 0.9828401207923889,
+        "rmse": 1.2690653800964355
+      },
+      {
+        "epoch": 6,
+        "mae": 0.9849004745483398,
+        "rmse": 1.26656174659729
+      },
+      {
+        "epoch": 7,
+        "mae": 0.9862121939659119,
+        "rmse": 1.2657544612884521
+      },
+      {
+        "epoch": 8,
+        "mae": 0.9865725636482239,
+        "rmse": 1.2655482292175293
+      },
+      {
+        "epoch": 9,
+        "mae": 0.9863786697387695,
+        "rmse": 1.265668511390686
+      },
+      {
+        "epoch": 10,
+        "mae": 0.9860999584197998,
+        "rmse": 1.265812873840332
+      }
+    ]
+  }
+}
